@@ -62,7 +62,7 @@ The simulator screen showing the autonomous drive through a MPC controller.
 ![alt text][image1]
 
 #### Video
-A short video of the run of the car around the track can be found here. 
+A short video of the run of the car around the track can be found here.https://github.com/tomjose1792/CarND-Model-Predictive-Control-Project/blob/master/simulation/simulation_video.mov 
 
 
 
