@@ -28,12 +28,12 @@ Or use the `$ bash build_and_run.sh` provided to execute the above commands.
 
 A kinematic model is used with the follwing set of equations:
   
-      // x_[t] = x[t-1] + v[t-1] * cos(psi[t-1]) * dt
-      // y_[t] = y[t-1] + v[t-1] * sin(psi[t-1]) * dt
-      // psi_[t] = psi[t-1] + v[t-1] / Lf * delta[t-1] * dt
-      // v_[t] = v[t-1] + a[t-1] * dt
-      // cte[t] = f(x[t-1]) - y[t-1] + v[t-1] * sin(epsi[t-1]) * dt
-      // epsi[t] = psi[t] - psides[t-1] + v[t-1] * delta[t-1] / Lf * dt
+      x_[t] = x[t-1] + v[t-1] * cos(psi[t-1]) * dt
+      y_[t] = y[t-1] + v[t-1] * sin(psi[t-1]) * dt
+      psi_[t] = psi[t-1] + v[t-1] / Lf * delta[t-1] * dt
+      v_[t] = v[t-1] + a[t-1] * dt
+      cte[t] = f(x[t-1]) - y[t-1] + v[t-1] * sin(epsi[t-1]) * dt
+      epsi[t] = psi[t] - psides[t-1] + v[t-1] * delta[t-1] / Lf * dt
 
 which gives the state of the model,
 
