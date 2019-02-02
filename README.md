@@ -8,7 +8,7 @@
 
 ### Project Goal and Implementation:
 
-The project goal is to navigate a vehicle on a track in a Udacity-provided simulator, which actually provides telemetry and track waypoint data, by controlling steering and acceleration values. A 100ms latency is also added to counter the lag in implementing the control values. The project code, makes use of the IPOPT and CPPAD libraries to calculate an optimal trajectory and associated actuation control values in order to minimize the error with a third-degree polynomial fit to the waypoints taken. The optimization considers only a predifned set of waypoints, and predicts a trajectory for that duration based upon a Kinematic model of the vehicle and a cost function based mostly on the vehicle's cross-track error (the distance from the track waypoints and the current position) and orientation angle error.
+The project goal is to navigate a vehicle on a track in a Udacity-provided simulator, which actually provides telemetry and track waypoint data, by controlling steering and acceleration values. A 100 ms latency is also added to counter the lag in implementing the control values. The project code, makes use of the IPOPT and CPPAD libraries to calculate an optimal trajectory and associated actuation control values in order to minimize the error with a third-degree polynomial fit to the waypoints taken. The optimization considers only a predifned set of waypoints, and predicts a trajectory for that duration based upon a Kinematic model of the vehicle and a cost function based mostly on the vehicle's cross-track error (the distance from the track waypoints and the current position) and orientation angle error.
  
 #### Note: Project code files in 'src' folder
 
@@ -53,7 +53,7 @@ The waypoints received from the simulator are transformed to the vehicle coordin
 
 #### Model Predictive Control with Latency:
 
-A latency of 100ms is implemented as given by Udacity. I did vary the latency values from 50 to 100 ms and found how it effected the output. A latency is implemented to account for the delay in implementation of control values as the state for which the state the model calculated the control values would have changed to a new timestep because of the delay. Therefore calculations are carried out for a timestep of 100ms ahead.
+A latency of 100ms is implemented as given by Udacity. I did vary the latency values from 50 to 100 ms and found how it effected the output. A latency is implemented to account for the delay in implementation of control values as the state for which the state the model calculated the control values would have changed to a new timestep because of the delay. Therefore calculations are carried out for a timestep of 100 ms ahead.
 
 ### Simulation:
 
@@ -62,7 +62,7 @@ The simulator screen showing the autonomous drive through a MPC controller.
 ![alt text][image1]
 
 #### Video
-A short video of the run of the car aroudn the car can be found here. 
+A short video of the run of the car around the track can be found here. 
 
 
 
