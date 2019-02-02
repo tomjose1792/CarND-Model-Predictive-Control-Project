@@ -26,7 +26,7 @@ Or use the `$ bash build_and_run.sh` provided to execute the above commands.
 
 #### The model:
 
-A kinematic model is used with the follwing set of equations:
+A kinematic model is used with the following set of equations:
   
       x_[t] = x[t-1] + v[t-1] * cos(psi[t-1]) * dt
       y_[t] = y[t-1] + v[t-1] * sin(psi[t-1]) * dt
