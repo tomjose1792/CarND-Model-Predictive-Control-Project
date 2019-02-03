@@ -83,8 +83,8 @@ int main() {
           const double x0 = 0;
           const double y0 = 0;
           const double psi0 = 0;
-          const double cte0 = coeffs[0];
-          const double epsi0 = -atan(coeffs[1]);
+          const double cte0 = coeffs[0]-y0;
+          const double epsi0 = psi0-atan(coeffs[1]);
 
           // State after delay.
           // _d - delayed
@@ -93,7 +93,8 @@ int main() {
           double psi_d = psi0 - ( v * steer_value * t_delay / mpc.Lf );
           double v_d = v + throttle_value * t_delay;
           double cte_d = cte0 + ( v * sin(epsi0) * t_delay );
-          double epsi_d = epsi0 - ( v * atan(coeffs[1]) * t_delay / mpc.Lf );
+          double epsi_d = epsi0 + ( v / mpc.Lf * steer_value * t_delay );
+
 
           // Define the state vector.
           Eigen::VectorXd state(6);
